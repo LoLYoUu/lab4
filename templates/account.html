@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  {% if full_name and username and password %}
+    <p>Hello, {{full_name}}! </p>
+    <br>
+    <p>Your credentials:<br> Login: {{username}} <br> Password: {{password}}</p>
+  {% endif %}
+
+</body>
+</html>

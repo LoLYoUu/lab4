@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <form action="" method="post">
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </p>
+        <!-- Empty username or password -->
+        {% if empty_error==1 %}
+        <p style="color:red;">
+            Username or password fields can't be empty!
+        </p>
+        {% endif %}
+
+        <!-- Didn't find any user with specified credentials -->
+        {% if not_registered_error==1 %}
+        <p style="color:red;">
+            Invalid login or password!
+        </p>
+        {% endif %}
+
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+</body>
+</html>
